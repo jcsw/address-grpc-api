@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package address;
+
+message Input {
+  string zip_code = 1;
+}
+
+message Output {
+  string street = 1;
+}
+
+service AddressService {
+  rpc SearchAddress(Input) returns (Output);
+}
